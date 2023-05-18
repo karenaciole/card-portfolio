@@ -9,7 +9,10 @@ module.exports = {
         "fern-400": "#6daf64",
         "fern-800": "#2f502b",
         "fern-900": "#112310"
-      }
+      },
+      animation: {
+        "ping-slow": "ping 1.5s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
