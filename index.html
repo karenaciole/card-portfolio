@@ -118,11 +118,12 @@
       if (switchContainer.classList.contains("bg-gray-300")) {
         switchContainer.classList.replace('bg-gray-300', 'bg-cyan-800');
         switchElement.classList.add('translate-x-7');
-        //body.classList.replace('bg-fern-50' ,'bg-gray-900');
+        body.classList.replace('bg-fern-50' ,'bg-fern-900');
       } else {
+        body = document.querySelector('body');
         switchContainer.classList.replace('bg-cyan-800', 'bg-gray-300');
         switchElement.classList.remove('translate-x-7');
-        body.classList.replace('bg-gray-900' ,'bg-fern-50');
+        body.classList.replace('bg-fern-900' ,'bg-fern-50');
       }
     }
     </script>
