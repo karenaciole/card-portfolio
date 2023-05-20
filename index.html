@@ -5,18 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-    <title>Portfolio 👾</title>
+    <title>About Me - Card 👾</title>
 </head>
 <body class="bg-fern-50">
-    <div class="flex items-center p-4 h-screen">
+  <header>
+    <div class="space-x-0">
+    <button autofocus id="pt-br" class="float-left mt-10 ml-16 rounded-l-lg px-6 py-2 bg-fern-200 opacity-80 focus:bg-green-700  focus:text-white" onclick="onclickLang()">PT-BR</button>
+    <button id="en"class="float-left mt-10 ml-16 rounded-r-lg px-6 py-2 bg-fern-200 opacity-80 focus:bg-green-700  focus:text-white" onclick="onclickLang()">EN</button>
+    </div>
+    <button class="float-right mt-10 mr-16">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <div class="flex justify-center items-center">
+          <span class="">
+            <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+        </span>
+          <!-- Switch Container -->
+          <div id="switchContainer" class="w-14 h-7 flex items-center bg-gray-300 rounded-full mx-3 px-1" onclick="handleToggleActive()">
+            <!-- Switch -->
+            <div id="switch" class="bg-white w-5 h-5 rounded-full shadow-md"></div>
+          </div>
+          <span class="">
+            <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </span>
+        </div>
+      </div>
+    </button>
+   
+  </header>
+    <div class="flex items-center p-4 h-screen w-max">
         <div class="bg-fern-400 rounded-lg shadow-xl roundex px-8 pt-6 pb-8 mb-4 mx-auto w-full md:w-1/2">
-            <h1 class="text-fern-200 text-opacity-70 text-center text-5xl font-mono">
+            <h1 id="title" class="text-fern-200 text-opacity-70 text-center text-5xl font-mono">
                 Hi, I'm <strong><u class="text-fern-800">Karen</u></strong><a class="animate-ping-slow">|</a>
             </h1>
             <div class="flex items-center mt-5">
                 <p class="text-fern-800 text-opacity-80 font-mono text-lg">
-                <a class="text-fern-300">debian@acyo</a><a class="text-black opacity-60">:~$</a> Currently doing my Bsc. in <strong>Computer Science</strong> @ 🇧🇷. <br><br>  
-                <a class="text-fern-300">debian@acyo</a><a class="text-black opacity-60">:~$</a> On my way to becoming a <strong>software developer</strong> who's also a Data Science and Machine Learning enthusiast. <br><br>
+                <a id="college" class="text-fern-300">debian@acyo</a><a class="text-black opacity-60">:~$</a> Currently doing my Bsc. in <strong>Computer Science</strong> @ 🇧🇷. <br><br>  
+                <a id="about" class="text-fern-300">debian@acyo</a><a class="text-black opacity-60">:~$</a> On my way to becoming a <strong>software developer</strong> who's also a Data Science and Machine Learning enthusiast. <br><br>
                 </p>
                 <img 
                   class="shadow-lg rounded-full h-40 w-40 mx-auto ml-4 max-w-xs" 
@@ -82,5 +110,45 @@
                 </a>
             </div>
         </div>
+    <script>
+      function handleToggleActive() {
+      const switchContainer = document.getElementById("switchContainer");
+      const switchElement = document.getElementById("switch");
+      body = document.querySelector('body');
+
+      if (switchContainer.classList.contains("bg-gray-300")) {
+        switchContainer.classList.replace('bg-gray-300', 'bg-fern-400');
+        switchElement.classList.add('translate-x-7');
+        body.classList.replace('bg-fern-50' ,'bg-fern-900');
+      } else {
+        switchContainer.classList.replace('bg-fern-400', 'bg-gray-300');
+        switchElement.classList.remove('translate-x-7');
+        body.classList.replace('bg-fern-900' ,'bg-fern-50');
+      }
+    }
+
+   
+    function onclickLang() {
+      
+      const title-en = `Hi, I'm`;
+      const college-en = `Currently doing my Bsc. in <strong>Computer Science</strong> @ 🇧🇷.`
+      const about-en = `On my way to becoming a <strong>software developer</strong> who's also a Data Science and Machine Learning enthusiast.`
+
+      const title-pt-br = `Oi, eu sou a`;
+      const college-pt-br = `Atualmente cursando <strong>Ciência da Computação</strong> na UFCG.`
+      const about-pt-br = `Em busca de me tornar uma <strong>desenvolvedora de software</strong> que também se interessa por Ciência de Dados e Machine Learning.`
+      
+      const title-html = document.getElementById("title");
+      const college-html = document.getElementById("college");
+      const about-html = document.getElementById("about");
+
+    
+      
+    
+    
+    }
+
+    
+    </script>
 </body>
 </html>
